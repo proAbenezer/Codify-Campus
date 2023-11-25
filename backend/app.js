@@ -8,6 +8,7 @@ require("express-async-errors");
 const notesRouter = require("./controllers/notes");
 const usersRouter = require("./controllers/users");
 const loginRouter = require("./controllers/login");
+const helloRouter = require("./controllers/hello");
 
 const middleware = require("./utils/middleware");
 
@@ -30,6 +31,7 @@ app.use(express.json());
 app.use(middleware.requestLogger);
 
 app.use("/api/login", loginRouter);
+app.use("/api/hello", helloRouter);
 
 app.use(middleware.authMiddleware);
 

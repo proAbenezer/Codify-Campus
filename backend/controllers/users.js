@@ -16,8 +16,8 @@ usersRouter.post("/", async (request, response) => {
   response.status(201).json(savedUser);
 });
 
-usersRouter.get("/", async (_, response) => {
-  const users = await User.find({}).populate("notes", {
+usersRouter.get("/", async (request, response) => {
+  const users = await User.findById(request.user.id).populate("notes", {
     content: 1,
     important: 1,
   });

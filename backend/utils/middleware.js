@@ -1,3 +1,5 @@
+const jwt = require("jsonwebtoken");
+
 const requestLogger = (request, _, next) => {
   console.log("Method: ", request.method);
   console.log("Path:   ", request.path);
@@ -25,10 +27,10 @@ const errorHandler = (error, _, response, next) => {
 };
 
 const authMiddleware = (request, response, next) => {
-  const token = request.get("authorization");
+  let token = request.get("authorization");
   token =
     token && token.startsWith("Bearer ") ? token.replace("Bearer ", "") : null;
-  const decodedToken = jwt.verify(authorization, process.env.JWT_SECRET);
+  const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
   if (!decodedToken.id) {
     return response.status(401).json({ error: "token invalid" });
   }
