@@ -1,0 +1,91 @@
+.header {
+  position: fixed;
+  top: 0;
+  background-color: hsl(220, 15%, 16%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  z-index: 100;
+}
+.active {
+  box-shadow: 10px 0 10px 5px hsl(220, 15%, 24%);
+}
+.header__logo {
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.header__logo a {
+  text-decoration: none;
+  color: #fff;
+}
+.header__logo .header__logo--colored {
+  color: hsl(9, 87%, 57%);
+}
+.header__searchbar {
+  background: hsl(220, 15%, 24%);
+  width: 600px;
+  height: 40px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.header__searchInput {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding: 7px 15px;
+  background: transparent;
+  color: inherit;
+  font-size: 16px;
+}
+.header__searchInput::placeholder {
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+}
+.header__searchbar--icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #fff !important;
+}
+.header__right {
+  display: flex;
+  justify-content: space-between;
+}
+.header__right--icons {
+  display: flex;
+  margin-right: 40px;
+}
+.header__moonIcon {
+  display: none !important;
+  color: #fff;
+}
+.header__sunIcon {
+  font-size: 30px !important;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.header__sunIcon:hover,
+.header__sunIcon:focus {
+  transform: rotate(360deg);
+}
+.header__userIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: hsl(220, 15%, 24%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid hsl(9, 87%, 57%);
+  cursor: pointer;
+}
