@@ -17,6 +17,7 @@ export const topics = [
       "Chapter One",
       "Chapter One",
     ],
+    location: `/Chapters/${1}`,
   },
   {
     header: "Advnce",
@@ -36,5 +37,6 @@ export const topics = [
       "Chapter One",
       "Chapter One",
     ],
+    location: `/Chapters/${1}`,
   },
 ];

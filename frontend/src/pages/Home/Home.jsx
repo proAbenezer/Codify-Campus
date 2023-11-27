@@ -6,13 +6,13 @@ import './Home.css'
 
 //Component
 import Sidebar from '../../components/Sidebar/Sidebar'
+import Main from '../../components/Main/Main'
+import { Outlet } from 'react-router-dom'
 function Home() {
     return (
-        <div className='home'>
-            <div className="home__sidebar">
-                <Sidebar />
-            </div>
-            <div className="home__main"></div>
+        <div className='Home'>
+            <Sidebar />
+            <Outlet />
         </div>
     )
 }

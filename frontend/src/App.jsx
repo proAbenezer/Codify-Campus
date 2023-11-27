@@ -11,6 +11,8 @@ import Home from './pages/Home/Home'
 
 //Components
 import Layout from './components/Layout/Layout'
+import Main from './components/Main/Main'
+import Chapters from './components/Chapters/Chapters'
 
 function App() {
 
@@ -19,7 +21,10 @@ function App() {
       <div className="app">
         <Routes>
           <Route path='/' element={<Layout />}>
-            <Route index element={<Home />} />
+            <Route path='' element={<Home />} >
+              <Route index element={<Main />} />
+              <Route path='chapters/:id' element={<Chapters />} />
+            </Route>
           </Route>
         </Routes>
       </div>

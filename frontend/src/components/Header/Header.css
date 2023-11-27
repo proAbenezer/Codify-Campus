@@ -9,7 +9,7 @@
   padding: 15px 20px;
   z-index: 100;
 }
-.active {
+.header.active {
   box-shadow: 10px 0 10px 5px hsl(220, 15%, 24%);
 }
 .header__logo {

@@ -5,7 +5,9 @@ import React from 'react'
 import './Main.css'
 function Main() {
     return (
-        <main className='main'>Main</main>
+        <main className='main'>
+            <h1>This is the main page choose any chapter to start with </h1>
+        </main>
     )
 }
 
