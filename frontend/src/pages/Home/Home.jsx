@@ -10,7 +10,7 @@ import Main from '../../components/Main/Main'
 import { Outlet } from 'react-router-dom'
 function Home() {
     return (
-        <div className='Home'>
+        <div className='home'>
             <Sidebar />
             <Outlet />
         </div>
